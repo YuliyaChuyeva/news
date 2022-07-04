@@ -1,0 +1,60 @@
+.form-container{
+    background: #ecf0f3;
+    font-family: 'Nunito', sans-serif;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+.bg{
+    background:#ebf4f9;
+}
+.comment{
+    color: #000;
+    background-color: #10b3be;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+
+    border-radius: 20px;
+
+    border: none;
+    transition: all 0.5s ease 0s;
+}
+.btn{
+    color: #000;
+    background-color: #10b3be;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /*width: 100%;*/
+    padding: 12px 15px 11px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px #fff;
+    border: none;
+    transition: all 0.5s ease 0s;
+}
+.form-container-comment{
+
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background: #ecf0f3;
+    font-family: 'Nunito', sans-serif;
+    padding: 20px;
+    border-radius: 20px;
+    /*box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;*/
+}
+li {
+    list-style-type: none;
+}
+.nav-item {
+    margin-right: 10px;
+}
+.wrap {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.btn-delete {
+    margin-left: 10px;
+}

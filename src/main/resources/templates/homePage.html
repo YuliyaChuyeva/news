@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:C="http://www.w3.org/1999/xhtml"
+
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles/homePage.css">
+    <title>Home</title>
+</head>
+<body>
+<nav th:fragment="navigation" class="navbar navbar-expand-lg navbar-light bg">
+    <div class="container-fluid">
+       <img src="data:image/png;base64,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" width="40" height="44">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="btn nav-link active" aria-current="page" href="/home">Home</a>
+                </li>
+
+                <li class="nav-item" sec:authorize="hasRole('ROLE_USER')">
+                    <a class=" btn nav-link active" aria-current="page" href="/all/news">My news</a>
+                </li>
+
+
+
+            </ul>
+            <li class="nav-item" sec:authorize="!isAuthenticated()">
+                <a class="btn nav-link text-end" th:href="@{/login}" th:text="Войти"></a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+                <form method="post" th:action="@{/logout}">
+                    <input class="btn" type="submit" value="Logout">
+                </form>
+            </li>
+            <form  th:action="@{/home/search}" class="d-flex">
+                <input class="form-control me-2" type="text" name="keyword" th:value="${keyword}" required placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<div class="container-fluid portal p-5  text-white text-center">
+    <h1>News portal</h1>
+</div>
+
+<div>
+    <a class="btn btn-primary" href="/createNews" role="button">Create News</a>
+</div>
+
+<div class="container mt-5">
+    <div class="row row-cols-4" >
+
+    <div class="col-sm-4 form-container"th:unless="${newsListHome==null}" th:each="nH : ${newsListHome}">
+
+        <h5 class="mb-1"><p th:text="${nH.title}"></p></h5>
+        <div class="new-item_text">
+            <p th:text="${nH.text}"></p>
+        </div>
+        <small><p  th:text="${nH.date}"></p></small>
+
+        <form th:method="get" th:action="@{/commentNews/{id}(id=${nH.id}) }" >
+            <input class="btn btn-primary" type="submit" value="Комментарии" >
+        </form>
+
+
+        <div sec:authorize="hasRole('ROLE_ADMIN')">
+            <form th:method="get" th:action="@{/news/deleteAdmin/{id}(id=${nH.id})}" >
+                <input class="btn btn-primary" type="submit" value="Delete" >
+            </form>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
